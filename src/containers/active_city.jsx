@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class ActiveCity extends Component {
-    render(){
-      return ( <div className="active-city">
-             <p> { this.props.activeCity.name}</p>
-             <p> { this.props.activeCity.address}</p>
-             </div>)
+  render(){
+      var url = `https://kitt.lewagon.com/placeholder/cities/${this.props.activeCity.slug}`;
+      return (  <div className="active-city">
+                <h3>{this.props.activeCity.name}</h3>
+                <p>{this.props.activeCity.address}</p>
+                 <img src={url} width="100%" />
+    </div>)
     }
 }
 
