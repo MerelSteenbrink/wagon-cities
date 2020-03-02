@@ -7,7 +7,7 @@ import {setActiveCity} from '../actions'
 class City extends Component {
     render(){
         return(
-            <div className="city"
+            <div className={"city" + (this.props.activeCity.name === this.props.name ? " active" : "")}
              onClick={() => this.props.setActiveCity(this.props.city)}>
              <p> {this.props.name}</p>
              </div>
@@ -20,4 +20,8 @@ function mapDispatchToProps(dispatch){
     {setActiveCity: setActiveCity}, dispatch)
 }
 
-export default connect(null, mapDispatchToProps )(City);
+function mapStateToProps(state){
+    return { activeCity: state.activeCity}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps )(City);

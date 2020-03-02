@@ -1,10 +1,12 @@
 body {
   color: white;
-  background-color: #61DAFB;
+  background-color: #FFD936;
+  font-size: 16px;
+  font-family: BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue;
 }
 
 .app {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 20px;
   display: flex;
   .cities {
@@ -14,8 +16,9 @@ body {
     width: 70%;
     margin-left: 20px;
     margin-bottom: 20px;
+    margin-top: 80px;
     padding: 10px 15px;
-    border: 1px solid #ddd;
+    border-left: 1px solid white;
     border-radius: 4px;
     h3 {
       margin-top: 0;
@@ -23,7 +26,14 @@ body {
   }
 }
 
-.list-group-item {
-  background-color: transparent;
+.city {
   cursor: pointer;
+}
+
+.active {
+  color: red;
+}
+
+h1 {
+  color: red;
 }
